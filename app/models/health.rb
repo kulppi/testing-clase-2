@@ -8,7 +8,7 @@ class Health < ActiveRecord::Base
 
     def check_consistency
         # should check that current < maximum
-        if false
+        if self.current > self.maximum
           errors.add(:current, "can't be larger than maximum")
         end
     end
